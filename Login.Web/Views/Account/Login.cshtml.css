@@ -1,0 +1,7 @@
+﻿.hidden {
+    display: none;
+}
+
+.bootbox.modal .modal-body {
+    color: #4bb1e6;
+}

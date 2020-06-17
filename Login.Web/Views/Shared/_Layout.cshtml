@@ -1,4 +1,70 @@
-﻿<!DOCTYPE html>
+﻿@*@{
+        @Html.AddBundles(new ScriptBundle("~/js/layout")
+            .Include("~/vendor/babel-external-helpers/babel-external-helpers.js",
+                    "~/vendor/jquery/jquery.js",
+                    "~/vendor/tether/tether.js",
+                    "~/vendor/bootstrap/js/bootstrap.js",
+                    "~/vendor/animsition/animsition.js",
+                    "~/vendor/mousewheel/jquery.mousewheel.js",
+                    "~/vendor/asscrollbar/jquery-asScrollbar.js",
+                    "~/vendor/asscrollable/jquery-asScrollable.js",
+                    "~/vendor/jquery-mmenu/jquery.mmenu.min.all.js",
+                    "~/vendor/switchery/switchery.min.js",
+                    "~/vendor/intro-js/intro.js",
+                    "~/vendor/screenfull/screenfull.js",
+                    "~/vendor/slidepanel/jquery-slidePanel.js",
+                    "~/vendor/matchheight/jquery.matchHeight.js",
+                    "~/vendor/peity/jquery.peity.js",
+                    "~/js/State.js",
+                    "~/js/Component.js",
+                    "~/js/Plugin.js",
+                    "~/js/Base.js",
+                    "~/js/Config.js",
+                    "~/js/Section/Menubar.js",
+                    "~/js/Section/Sidebar.js",
+                    "~/js/Section/PageAside.js",
+                    "~/js/Section/GridMenu.js",
+                    "~/js/config/colors.js",
+                    "~/js/config/tour.js",
+                    "~/js/Site.js",
+                    "~/js/Plugin/asscrollable.js",
+                    "~/js/Plugin/slidepanel.js",
+                    "~/js/Plugin/switchery.js",
+                    "~/js/Plugin/matchheight.js",
+                    "~/vendor/bootstrap/js/bootbox.js",
+                    "~/vendor/BeingIT/BeingIT.js",
+                    "~/vendor/BeingIT/BeingIT.UI.js",
+                    "~/vendor/BeingIT/BeingIT.Web.Services.js",
+                    "~/vendor/messenger/js/messenger.js",
+                    "~/Views/Shared/Layout.cshtml.js"));
+
+        @Html.AddBundles(new StyleBundle("~/css/layout")
+            .Include("~/vendor/font-awesome/css/font-awesome.css", new CssRewriteUrlTransform())
+            .Include("~/vendor/bootstrap/css/bootstrap.css", new CssRewriteUrlTransform())
+            .Include("~/css/bootstrap-extend.css", new CssRewriteUrlTransform())
+            .Include("~/vendor/messenger/css/messenger.css",
+                     "~/vendor/messenger/css/messenger-spinner.css",
+                     "~/vendor/messenger/css/messenger-theme-air.css",
+                     "~/vendor/animsition/animsition.css",
+                     "~/vendor/asscrollable/asScrollable.css",
+                     "~/vendor/switchery/switchery.css",
+                     "~/vendor/intro-js/introjs.css",
+                     "~/vendor/slidepanel/slidePanel.css",
+                     "~/vendor/jquery-mmenu/jquery-mmenu.css",
+                     "~/vendor/flag-icon-css/flag-icon.css",
+                     "~/vendor/waves/waves.css",
+                     "~/vendor/chartist/chartist.css",
+                     "~/vendor/jvectormap/jquery-jvectormap.css",
+                     "~/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css")
+            .Include("~/fonts/web-icons/web-icons.css", new CssRewriteUrlTransform())
+            .Include("~/fonts/material-design/material-design.css", new CssRewriteUrlTransform())
+            .Include("~/fonts/brand-icons/brand-icons.css", new CssRewriteUrlTransform())
+            .Include("~/css/site.css",
+                     "~/Views/Shares/Layout.cshtml.css",
+                     "~/css/site.custom.css"));
+    }}*@
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />

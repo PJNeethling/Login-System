@@ -1,0 +1,68 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Login";
+
+    @*@Html.AddBundles(new StyleBundle("~/css/login")
+        .Include("~/Views/Account/Login.cshtml.css"))
+
+    @Html.AddBundles(new ScriptBundle("~/js/login")
+        .Include("~/Views/Account/Login.cshtml.js"))
+}
+@section HeaderContent{
+    @Html.RenderStyles("~/css/login")
+}
+@section ScriptContent{
+    @Html.RenderScripts("~/js/login")
+}*@
+<div class="login-form-container">
+    <form method="post" action="#">
+        <div class="form-group">
+            <div class="row text-center">
+                <a href="@Url.Action("Index", "Home")"><img src="~/images/eMC_logo_300x100.png" /></a>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="alert alert-success hidden">
+                    <strong>Success! </strong>You have been logged in.
+                </div>
+            </div>
+            <div class="row">
+                <div class="alert alert-danger hidden">
+                    <strong class="error-message"></strong>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" name="username" class="form-control" placeholder="Username or email address" autofocus value="@(Model != null ? Model.UserName : "")" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="password" name="password" class="form-control" placeholder="Password" value="@(Model != null ? Model.Password : "")" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group clearfix">
+            <div class="checkbox-custom checkbox-inline checkbox-primary pull-xs-left">
+                <input type="checkbox" name="persist">
+                <label for="inputCheckbox">Remember Me?</label>
+            </div>
+            <a class="pull-xs-right" href="@(Model != null ? Url.Action("Recover", "Account", new eMC.Web.Models.RecoverUserModel() { UserName = Model.UserName}) : Url.Action("Recover", "Account"))">Forgot password?</a>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                </div>
+            </div>
+        </div>
+        <div class="form-group clearfix">
+            <a href="@Url.Action("Register", "Account")">Don't have an account? Sign up</a>
+        </div>
+    </form>
+</div>
